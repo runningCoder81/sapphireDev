@@ -5,6 +5,7 @@ module.exports = {
     author: `Bobby Lee`,
   },
   plugins: [
+    'gatsby-plugin-netlify',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
