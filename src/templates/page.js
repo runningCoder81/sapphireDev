@@ -7,6 +7,7 @@ export default class Page extends Component {
     return (
       <Layout>
         <h1>{data.wordpressPage.title}</h1>
+        {/* <div>{data.wordpressPage.acf.test}</div> */}
         <div
           dangerouslySetInnerHTML={{
             __html: data.wordpressPage.content,
@@ -23,6 +24,9 @@ export const query = graphql`
       title
       slug
       content
+      acf {
+        test
+      }
     }
   }
 `

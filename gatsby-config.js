@@ -34,8 +34,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-wordpress',
       options: {
-        baseUrl: 'dev-sapphire-development.pantheonsite.io',
-        protocol: 'http',
+        baseUrl: 'sapphireapi.com/sapphiredev/',
+        protocol: 'https',
         hostingWPCOM: false,
         useACF: true,
       },

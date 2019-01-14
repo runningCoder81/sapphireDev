@@ -1,21 +1,49 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import { StaticQuery, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
+// import Image from '../components/image'
 import SEO from '../components/seo'
+import HomeIntro from '../components/home/homeIntro'
+import HomeAbout from '../components/home/homeAbout'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+const IndexPage = ({ siteTitle }) => (
+  <StaticQuery
+    query={graphql`
+      query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+        wordpressPage(slug: { eq: "home" }) {
+          acf {
+            site_title
+            site_sub_title
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Layout>
+        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <HomeIntro />
+        <HomeAbout />
+        <section className="home-projects" />
+        <section className="home-news" />
+      </Layout>
+    )}
+  />
 )
+
+IndexPage.propTypes = {
+  siteTitle: PropTypes.string,
+}
+
+IndexPage.defaultProps = {
+  siteTitle: ``,
+}
 
 export default IndexPage
