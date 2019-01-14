@@ -1,6 +1,6 @@
 // For ES5 builds, import from 'pts/dist/es5'. For ES6 or custom builds, import from 'pts'.
 import { Create } from 'pts'
-import PtsCanvas from './PtsCanvas'
+import PtsCanvas from './ptsCanvas'
 
 /**
  * Chart example component, which extends PtsCanvas

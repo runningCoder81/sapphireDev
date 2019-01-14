@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import PtsCanvas from './PtsCanvas'
 import { AnimationExample } from './ptsExamples'
 import './pts.css'
 import './highlight-github.css'
