@@ -6,13 +6,12 @@ export default class Page extends Component {
     const { data } = this.props
     return (
       <Layout>
-        <h1>{data.wordpressPage.title}</h1>
         {/* <div>{data.wordpressPage.acf.test}</div> */}
-        <div
+        {/* <div
           dangerouslySetInnerHTML={{
             __html: data.wordpressPage.content,
           }}
-        />
+        /> */}
       </Layout>
     )
   }
