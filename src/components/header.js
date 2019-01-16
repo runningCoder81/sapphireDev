@@ -1,50 +1,67 @@
 import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
+import { StaticQuery, graphql } from 'gatsby'
+import styled from 'styled-components'
 import React from 'react'
 import { FaRegGem } from 'react-icons/fa'
 
-const Header = ({ siteTitle, menu }) => (
-  <div
-    style={{
-      background: `rebeccapurple`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          <FaRegGem />
-        </Link>
-      </h1>
+const HeaderWrapper = styled.div`
+  background: #1b242f;
+  border-bottom: 1px solid #e31b6d;
+`
 
-      <nav>
-        {menu.map(item => (
-          <Link key={item.object_id} to={`/${item.object_slug}`}>
-            {item.title}
+const HeaderContent = styled.div`
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  a {
+    color: #fff;
+    line-height: 0;
+  }
+`
+
+const HeaderNav = styled.nav`
+  a {
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 20px;
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+`
+
+const Header = () => (
+  <StaticQuery
+    query={graphql`
+      query HomeNavQuery {
+        wordpressPage(slug: { eq: "home" }) {
+          acf {
+            about_title
+          }
+        }
+      }
+    `}
+    render={data => (
+      <HeaderWrapper>
+        <HeaderContent>
+          <Link to="/">
+            <FaRegGem />
           </Link>
-        ))}
-      </nav>
-    </div>
-  </div>
+          <HeaderNav>
+            <div>
+              <Link to="#about">{data.wordpressPage.acf.about_title}</Link>
+            </div>
+          </HeaderNav>
+        </HeaderContent>
+      </HeaderWrapper>
+    )}
+  />
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

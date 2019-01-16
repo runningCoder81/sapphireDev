@@ -9,7 +9,7 @@ import SEO from '../components/seo'
 import HomeIntro from '../components/home/homeIntro'
 import HomeAbout from '../components/home/homeAbout'
 
-const IndexPage = ({ siteTitle }) => (
+const IndexPage = () => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
