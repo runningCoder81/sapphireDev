@@ -8,7 +8,6 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import HomeIntro from '../components/home/homeIntro'
 import HomeAbout from '../components/home/homeAbout'
-import Footer from '../components/footer/footer'
 // import HomeProjects from '../components/home/homeProjects'
 
 const IndexPage = () => (
