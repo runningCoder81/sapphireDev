@@ -273,15 +273,23 @@ h3 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 50px;
   color: inherit;
   font-family: Raleway, sans-serif;
   font-weight: 600;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
-  line-height: 1.1rem;
+  font-size: 25px;
+  line-height: 34px;
   text-transform: uppercase;
 }
+
+@media only screen and (min-width: 768px) {
+  h3 {
+    font-size: 30px;
+    margin-bottom: 70px;
+  }
+}
+
 h4 {
   margin-left: 0;
   margin-right: 0;
@@ -631,4 +639,27 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+section.content {
+  padding: 70px 20px;
+  text-align: center;
+}
+@media (min-width: 1240px) {
+  section.content {
+    padding: 100px 40px;
+  }
+}
+@media (min-width: 1240px) {
+  section.content {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: calc(20px + (50% - (1240px / 2)));
+    padding-right: calc(20px + (50% - (1240px / 2)));
+  }
+}
+
+.white {
+  color: #fff !important;
+  background: #fff !important;
 }

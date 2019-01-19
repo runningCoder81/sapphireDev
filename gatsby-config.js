@@ -12,7 +12,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Raleway:300,400,600'],
+          families: ['Raleway:300,400,600', 'Open Sans:400'],
         },
       },
     },

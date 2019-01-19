@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Footer from './footer/footer'
 
 import Header from './header'
 import './layout.css'
@@ -9,11 +10,7 @@ const Layout = ({ children }) => (
     <Header />
     <div className="content">
       {children}
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      <Footer />
     </div>
   </>
 )
