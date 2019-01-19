@@ -1,13 +1,19 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-import HeaderBar from '../utility/headerBar'
 import { GoZap } from 'react-icons/go'
 import { MdImportantDevices } from 'react-icons/md'
 import { FaRegLightbulb } from 'react-icons/fa'
 import { IoIosJet } from 'react-icons/io'
 import Image from '../../components/image'
-import PeriodicTable from './periodicTable'
+// import PeriodicTable from './periodicTable'
+
+const HeaderBar = styled.div`
+  width: 70px;
+  height: 4px;
+  background: #444649;
+  margin: 0 auto 70px;
+`
 
 const AboutItemsWrap = styled.div`
   display: flex;
