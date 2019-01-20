@@ -1,0 +1,64 @@
+.periodic-table-wrapper {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.periodic-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  grid-auto-rows: 1fr;
+  grid-gap: 0;
+  border-top: 1px solid #fff;
+  z-index: 1;
+}
+
+.periodic-element {
+  display: block;
+  /* opacity: 0.4; */
+  border: 2px solid #fff;
+  transform: scale(1.03);
+  transition: all 3s linear;
+}
+
+.periodic-element svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.periodic-element:hover {
+  opacity: 1;
+  background: hsla(0, 0%, 100%, 0.15);
+  transition: all 0.3s ease-out;
+  box-shadow: 0 0 12px 0 hsla(0, 0%, 100%, 0.2);
+}
+
+.periodic-element-symbol {
+  font-weight: 500;
+}
+
+.periodic-element-name {
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+  text-align: center;
+}
+
+/* .periodic-gradient {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(29, 31, 31, 0), #212424 80%);
+  pointer-events: none;
+} */
+
+.salaries__selector {
+  display: inline-block;
+  border-bottom: 1px dashed #41c7c7;
+}
+
+.salaries__selector:after {
+  content: ' \25BE';
+}
