@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import UpperFooter from '../components/footer/upperFooter'
-import LowerFooter from '../components/footer/lowerFooter'
+import UpperFooter from './upperFooter'
+import LowerFooter from './lowerFooter'
 
 import Header from './header'
 import './layout.css'
