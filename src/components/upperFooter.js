@@ -11,7 +11,7 @@ const UpperFooterSection = styled.section`
     width: 100%;
     right: 0;
     left: 0;
-    top: -1;
+    top: -1px;
   }
   h2 {
     color: #fff;
