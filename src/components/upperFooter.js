@@ -77,6 +77,7 @@ const SubmitButtonWrap = styled.div`
   display: flex;
   justify-content: flex-end;
   button {
+    border-radius: 5px;
     padding: 10px 30px;
     border: 2px solid #fff;
     background: #1e242c;
@@ -84,9 +85,11 @@ const SubmitButtonWrap = styled.div`
     text-transform: uppercase;
     &:hover {
       background: #04c2c9;
+      border-color: #04c2c9;
     }
     &:focus {
       background: #e71b6d;
+      border-color: #fff;
     }
   }
 `
@@ -119,15 +122,15 @@ const UpperFooter = () => (
     >
       <input type="hidden" name="bot-field" />
       <label>
-        <input placeholder="Name" type="text" name="name" />
+        <input placeholder="Name" type="text" name="name" required />
       </label>
 
       <label>
-        <input placeholder="Email" type="email" name="email" />
+        <input placeholder="Email" type="email" name="email" required />
       </label>
 
       <label>
-        <textarea placeholder="Message" name="message" />
+        <textarea placeholder="Message" name="message" required />
       </label>
       <SubmitButtonWrap>
         <button type="submit">Submit</button>

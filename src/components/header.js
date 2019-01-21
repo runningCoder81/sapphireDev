@@ -24,12 +24,13 @@ const HeaderContent = styled.div`
 `
 
 const HeaderNav = styled.nav`
+  display: flex;
   a {
     font-weight: 300;
     font-size: 14px;
     text-transform: uppercase;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 15px;
     @media (min-width: 768px) {
       font-size: 16px;
     }
@@ -56,6 +57,12 @@ const Header = () => (
           <HeaderNav>
             <div>
               <Link to="#about">{data.wordpressPage.acf.about_title}</Link>
+            </div>
+            <div>
+              <Link to="#projects">Projects</Link>
+            </div>
+            <div>
+              <Link to="#contact">Contact</Link>
             </div>
           </HeaderNav>
         </HeaderContent>

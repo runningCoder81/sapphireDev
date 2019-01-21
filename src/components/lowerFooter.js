@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { FiChevronsUp } from 'react-icons/fi'
-import { FaLinkedinIn, FaGithub, FaCodepen } from 'react-icons/fa'
+import { FaLinkedinIn, FaGithub, FaCodepen, FaList } from 'react-icons/fa'
 
 const LowerFooterSection = styled.section`
   position: relative;
@@ -12,11 +13,16 @@ const LowerFooterSection = styled.section`
   justify-content: center;
   align-items: center;
   padding-bottom: 40px !important;
+  .back-to-top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 `
 
 const BackToTop = styled.div`
+  color: #fff;
   background: #e71b6d;
-  position: absolute;
   height: 50px;
   width: 47px;
   font-size: 40px;
@@ -24,10 +30,13 @@ const BackToTop = styled.div`
   position: absolute;
   top: -25px;
   cursor: pointer;
-  display: felx;
+  display: flex;
   justify-content: center;
   align-items: center;
-  transitoin: background 0.5s;
+  // display: felx;
+  // justify-content: center;
+  // align-items: center;
+  transition: background 0.5s;
   &:hover {
     background: #fb1f79;
   }
@@ -35,22 +44,33 @@ const BackToTop = styled.div`
 
 const SocialWrap = styled.div`
   display: flex;
-  justify-content: space-between;
   margin-bottom: 40px;
 `
 
 const SocialItem = styled.div`
   width: 55px;
   height: 55px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #262f38;
-  font-size: 24px;
-  line-height: 24px;
   margin: 0 10px;
   @media (min-width: 768px) {
     margin: 0 15px;
+  }
+  a {
+    background-color: #262f38;
+    font-size: 24px;
+    line-height: 24px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(85, 26, 139);
+      box-shadow: 0 0 0 3px rgba(4, 94, 201, 0.1);
+      transform: scale(0.9);
+    }
   }
 `
 
@@ -66,21 +86,51 @@ const CopyRight = styled.div`
 
 const LowerFooter = () => (
   <LowerFooterSection className="content">
-    <BackToTop>
-      <FiChevronsUp />
-    </BackToTop>
+    <Link className="back-to-top" to="/">
+      <BackToTop>
+        <FiChevronsUp />
+      </BackToTop>
+    </Link>
     <SocialWrap>
       <SocialItem>
-        <FaLinkedinIn />
+        <a
+          title="LinkedIn"
+          rel="nofollow noopener noreferrer"
+          target="_blank"
+          href="https://www.linkedin.com/in/robert-lee-254341108/"
+        >
+          <FaLinkedinIn />
+        </a>
       </SocialItem>
       <SocialItem>
-        <FaGithub />
+        <a
+          title="GitHub"
+          rel="nofollow noopener noreferrer"
+          target="_blank"
+          href="https://github.com/runningCoder81"
+        >
+          <FaGithub />
+        </a>
       </SocialItem>
       <SocialItem>
-        <FaCodepen />
+        <a
+          title="CodePen"
+          rel="nofollow noopener noreferrer"
+          target="_blank"
+          href="https://codepen.io/runningCoder/"
+        >
+          <FaCodepen />
+        </a>
       </SocialItem>
       <SocialItem>
-        <FaCodepen />
+        <a
+          title="Sapphire Lists"
+          rel="nofollow noopener noreferrer"
+          target="_blank"
+          href="https://sapphirelists.netlify.com/"
+        >
+          <FaList />
+        </a>
       </SocialItem>
     </SocialWrap>
     <CopyRight>
