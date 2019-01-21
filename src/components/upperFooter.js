@@ -110,7 +110,14 @@ const UpperFooter = () => (
       Have an Idea, question or just want to say Hi? Get in touch, I'll get back
       to you within one day.
     </HighlightText>
-    <ContactForm name="contact" method="POST" data-netlify="true">
+    <ContactForm
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      action="#"
+      data-netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="bot-field" />
       <label>
         <input placeholder="Name" type="text" name="name" />
       </label>
