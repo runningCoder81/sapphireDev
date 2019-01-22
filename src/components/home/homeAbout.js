@@ -19,13 +19,15 @@ const AboutItemsWrap = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-bottom: 80px;
 `
 
 const AboutItem = styled.div`
   text-align: center;
   margin-bottom: 60px;
-  max-width: 300px;
+  width: 48%;
   padding: 0 5px;
+
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -130,21 +132,24 @@ const ImgOuterWrap = styled.div`
 
 const ImgWrap = styled.div`
   width: 300px;
-  max-width: 90%;
+  max-width: 80%;
+  margin: 0 auto;
   position: relative;
-  background-color: #e71b6d;
+  // background-color: #e71b6d;
+  background-image: linear-gradient(180deg, rgba(0, 7, 88, 0.8), #4e025a);
   margin: 0 auto;
   @media (min-width: 768px) {
     right: -45px;
+    width: 350px;
   }
   .gatsby-image-wrapper {
     left: 10%;
-    bottom: 5vw;
+    bottom: 35px;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-    @media (min-width: 1000px) {
-      left: 70px;
-      bottom: 50px;
-    }
+    // @media (min-width: 1000px) {
+    //   left: 70px;
+    //   bottom: 50px;
+    // }
   }
 `
 
@@ -229,41 +234,42 @@ const HomeAbout = () => (
               <p>{data.wordpressPage.acf.dynamic_text}</p>
             </AboutItem>
           </AboutItemsWrap>
-        </section>
-        <section id="about" className="content">
-          <WhoMadeSite>
-            <h3>Who Made this site</h3>
-            <ImgPlusContentWrap>
-              <ImgOuterWrap>
-                <ImgWrap>
-                  <Image />
-                </ImgWrap>
-              </ImgOuterWrap>
-              <div>
-                Hi, my name is Bobby Lee. I'm a Front End Developer at{' '}
-                <a
-                  title="Link to Rosemont Media"
-                  href="https://www.rosemontmedia.com/"
-                  rel="noopener noreferrer nofollow"
-                  target="_blank"
-                >
-                  Rosemont Media
-                </a>{' '}
-                in San Diego California. I built this site to showcase my side
-                projects. I love learning and if the opportunity arises teaching
-                what I have learned. I develop websites and apps that are easy
-                to use and maintain while incorporating the most modern
-                technologies. Accessibility, SEO, and optimization are at the
-                forefront of my approach. If you have an idea or a project in
-                mind I would love to hear from you.
-                <p>
-                  {/* <a className="button" href="">
+
+          <div id="about" className="content">
+            <WhoMadeSite>
+              <h3>Who Made this site</h3>
+              <ImgPlusContentWrap>
+                <ImgOuterWrap>
+                  <ImgWrap>
+                    <Image />
+                  </ImgWrap>
+                </ImgOuterWrap>
+                <div>
+                  Hi, my name is Bobby Lee. I'm a Front End Developer at{' '}
+                  <a
+                    title="Link to Rosemont Media"
+                    href="https://www.rosemontmedia.com/"
+                    rel="noopener noreferrer nofollow"
+                    target="_blank"
+                  >
+                    Rosemont Media
+                  </a>{' '}
+                  in San Diego California. I built this site to showcase my side
+                  projects. I love learning and if the opportunity arises
+                  teaching what I have learned. I develop websites and apps that
+                  are easy to use and maintain while incorporating the most
+                  modern technologies. Accessibility, SEO, and optimization are
+                  at the forefront of my approach. If you have an idea or a
+                  project in mind I would love to hear from you.
+                  <p>
+                    {/* <a className="button" href="">
                 Contact Me
               </a> */}
-                </p>
-              </div>
-            </ImgPlusContentWrap>
-          </WhoMadeSite>
+                  </p>
+                </div>
+              </ImgPlusContentWrap>
+            </WhoMadeSite>
+          </div>
         </section>
         {/* <PeriodicTableWrap className="content">
           <h3>How this site is made</h3>

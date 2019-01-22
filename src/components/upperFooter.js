@@ -28,11 +28,8 @@ const BelowHeaderBar = styled.div`
 const HighlightText = styled.div`
   font-weight: 600;
   color: #04c2c9;
-  font-size: 12px;
+  font-size: 16px;
   margin-bottom: 40px;
-  @media (min-width: 768px) {
-    font-size: 16px;
-  }
 `
 
 const ContactForm = styled.form`
@@ -83,9 +80,11 @@ const SubmitButtonWrap = styled.div`
     background: #1e242c;
     color: #fff;
     text-transform: uppercase;
+    transition: background 0.3s;
     &:hover {
       background: #04c2c9;
       border-color: #04c2c9;
+      transform: background;
     }
     &:focus {
       background: #e71b6d;
@@ -95,7 +94,7 @@ const SubmitButtonWrap = styled.div`
 `
 
 const UpperFooter = () => (
-  <UpperFooterSection className="content">
+  <UpperFooterSection className="content" id="contact">
     <svg
       preserveAspectRatio="none"
       viewBox="0 0 100 102"

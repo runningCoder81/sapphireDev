@@ -5,7 +5,7 @@ import Particles from 'react-particles-js'
 
 const HomeIntroWrap = styled.section`
   position: relative;
-  height: calc(100vh - 51px);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

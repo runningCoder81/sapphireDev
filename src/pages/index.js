@@ -8,7 +8,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import HomeIntro from '../components/home/homeIntro'
 import HomeAbout from '../components/home/homeAbout'
-// import HomeProjects from '../components/home/homeProjects'
+import HomeProjects from '../components/home/homeProjects'
 
 const IndexPage = () => (
   <StaticQuery
@@ -32,10 +32,7 @@ const IndexPage = () => (
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <HomeIntro />
         <HomeAbout />
-
-        {/* <HomeProjects /> */}
-        <section className="home-projects" />
-        <section className="home-news" />
+        <HomeProjects />
       </Layout>
     )}
   />

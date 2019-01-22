@@ -6,7 +6,11 @@ import { FaRegGem } from 'react-icons/fa'
 
 const HeaderWrapper = styled.div`
   background: #1b242f;
-  border-bottom: 1px solid #e31b6d;
+  border-bottom: 2px solid #e31b6d;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 10;
 `
 
 const HeaderContent = styled.div`
