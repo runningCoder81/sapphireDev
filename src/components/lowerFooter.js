@@ -1,8 +1,12 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, animateScroll as scroll } from 'react-scroll'
 import styled from 'styled-components'
 import { FiChevronsUp } from 'react-icons/fi'
 import { FaLinkedinIn, FaGithub, FaCodepen, FaList } from 'react-icons/fa'
+
+function scrollToTop() {
+  scroll.scrollToTop()
+}
 
 const LowerFooterSection = styled.section`
   position: relative;
@@ -86,7 +90,13 @@ const CopyRight = styled.div`
 
 const LowerFooter = () => (
   <LowerFooterSection className="content">
-    <Link className="back-to-top" to="/">
+    <Link
+      activeClass="active"
+      onClick={scrollToTop}
+      spy={true}
+      smooth={true}
+      duration={500}
+    >
       <BackToTop>
         <FiChevronsUp />
       </BackToTop>

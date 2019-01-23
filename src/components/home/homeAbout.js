@@ -145,6 +145,7 @@ const ImgWrap = styled.div`
   .gatsby-image-wrapper {
     left: 10%;
     bottom: 35px;
+    overflow: hidden;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
     // @media (min-width: 1000px) {
     //   left: 70px;
@@ -235,7 +236,7 @@ const HomeAbout = () => (
             </AboutItem>
           </AboutItemsWrap>
 
-          <div id="about" className="content">
+          <div className="content">
             <WhoMadeSite>
               <h3>Who Made this site</h3>
               <ImgPlusContentWrap>

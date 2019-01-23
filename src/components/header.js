@@ -1,8 +1,9 @@
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import React from 'react'
 import { FaRegGem } from 'react-icons/fa'
+import { Link, animateScroll as scroll } from 'react-scroll'
 
 const HeaderWrapper = styled.div`
   background: #1b242f;
@@ -20,11 +21,6 @@ const HeaderContent = styled.div`
   height: 50px;
   display: flex;
   align-items: center;
-
-  a {
-    color: #fff;
-    line-height: 0;
-  }
 `
 
 const HeaderNav = styled.nav`
@@ -34,12 +30,21 @@ const HeaderNav = styled.nav`
     font-size: 14px;
     text-transform: uppercase;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 10px;
+    cursor: pointer;
+    height: 100%;
     @media (min-width: 768px) {
       font-size: 16px;
+      margin: 0 15px;
     }
   }
+  .active {
+    color: #e71b6d;
+  }
 `
+function scrollToTop() {
+  scroll.scrollToTop()
+}
 
 const Header = () => (
   <StaticQuery
@@ -55,18 +60,50 @@ const Header = () => (
     render={data => (
       <HeaderWrapper>
         <HeaderContent>
-          <Link to="/">
-            <FaRegGem />
-          </Link>
           <HeaderNav>
             <div>
-              <Link to="#about">{data.wordpressPage.acf.about_title}</Link>
+              <Link
+                to="top"
+                onClick={scrollToTop}
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <FaRegGem />
+              </Link>
             </div>
             <div>
-              <Link to="#projects">Projects</Link>
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                {data.wordpressPage.acf.about_title}
+              </Link>
             </div>
             <div>
-              <Link to="#contact">Contact</Link>
+              <Link
+                activeClass="active"
+                to="projects"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                Projects
+              </Link>
+            </div>
+            <div>
+              <Link
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                Contact
+              </Link>
             </div>
           </HeaderNav>
         </HeaderContent>
