@@ -22,6 +22,12 @@ const LowerFooterSection = styled.section`
     display: flex;
     justify-content: center;
   }
+  .b2topWrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 const BackToTop = styled.div`
@@ -37,9 +43,6 @@ const BackToTop = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  // display: felx;
-  // justify-content: center;
-  // align-items: center;
   transition: background 0.5s;
   &:hover {
     background: #fb1f79;
@@ -91,6 +94,7 @@ const CopyRight = styled.div`
 const LowerFooter = () => (
   <LowerFooterSection className="content">
     <Link
+      className="b2topWrap"
       activeClass="active"
       onClick={scrollToTop}
       spy={true}
