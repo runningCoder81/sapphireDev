@@ -120,7 +120,7 @@ const ImgOuterWrap = styled.div`
   position: relative;
   margin-top: 5vw;
   margin-left: -10%;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
   @media (min-width: 768px) {
     margin-left: 0;
     margin-bottom: 0;
@@ -135,12 +135,17 @@ const ImgWrap = styled.div`
   max-width: 80%;
   margin: 0 auto;
   position: relative;
-  // background-color: #e71b6d;
   background-image: linear-gradient(180deg, rgba(0, 7, 88, 0.8), #4e025a);
-  margin: 0 auto;
   @media (min-width: 768px) {
     right: -45px;
     width: 350px;
+  }
+  &:after {
+    content: 'Painted by my wife Sofya Lee*';
+    position: absolute;
+    right: calc(50% - 90px);
+    font-size: 13px;
+    color: black;
   }
   .gatsby-image-wrapper {
     left: 10%;
