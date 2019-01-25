@@ -116,7 +116,6 @@ const UpperFooter = () => (
       name="contact"
       method="POST"
       data-netlify="true"
-      action="#"
       data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="bot-field" />
