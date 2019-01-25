@@ -93,11 +93,6 @@ const SubmitButtonWrap = styled.div`
   }
 `
 
-const HiddenLabel = styled.span`
-  visibility: hidden;
-  position: absolute;
-`
-
 const UpperFooter = () => (
   <UpperFooterSection className="content" id="contact">
     <svg
@@ -126,17 +121,14 @@ const UpperFooter = () => (
     >
       <input type="hidden" name="bot-field" />
       <label>
-        <HiddenLabel>Name</HiddenLabel>
         <input placeholder="Name" type="text" name="name" required />
       </label>
 
       <label>
-        <HiddenLabel>Email</HiddenLabel>
         <input placeholder="Email" type="email" name="email" required />
       </label>
 
       <label>
-        <HiddenLabel>Message</HiddenLabel>
         <textarea placeholder="Message" name="message" required />
       </label>
       <SubmitButtonWrap>
